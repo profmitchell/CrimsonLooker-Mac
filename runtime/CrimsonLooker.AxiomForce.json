@@ -1,0 +1,9 @@
+{
+  "schema": "cohenconcepts.crimsonlooker.axiom-force.v1",
+  "enabled": true,
+  "range": 95.0,
+  "pull_speed": 190.0,
+  "patch_axiom_limit_range": false,
+  "hot_reload_seconds": 1.0,
+  "logging": "concise"
+}

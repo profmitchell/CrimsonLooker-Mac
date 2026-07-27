@@ -1,0 +1,25 @@
+# Live tuning file (optional).
+#
+# The normal way to set values is CrimsonLooker.AxiomForce.json. This file is
+# for probing addresses during a port, and for changing arbitrary floats mid
+# session without a rebuild.
+#
+# Format:  0xUNSLID_VMADDR = VALUE      ('#' starts a comment)
+#
+# Re-read about once a second while the game runs. Save, and the value is live.
+# Writes are confined to __DATA; executable pages are refused. Values are not
+# bounds checked here, unlike the JSON config.
+#
+# Every write is logged as "override 0x... old -> new", so this doubles as a way
+# to read an address: write to it once and look at the reported old value.
+#
+# Confirmed addresses for build 6f86f0e5-6cc6-3bed-b434-d1ef27f9a72e:
+#
+#   0x10881926c   Axiom Force range, vanilla 20
+#   0x108819dec   pull speed, vanilla 40
+#
+# Both are already handled by the JSON config on that build. Uncomment below
+# only if you want to bypass the config's bounds checking.
+
+# 0x10881926c = 250
+# 0x108819dec = 500

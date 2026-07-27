@@ -1,0 +1,12 @@
+build/
+*.dylib
+*.dSYM/
+*.o
+
+# Runtime state, never the templates that live in runtime/
+*.log
+*.bak_*
+backup/
+
+.DS_Store
+__pycache__/
