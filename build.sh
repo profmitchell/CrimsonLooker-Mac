@@ -37,7 +37,7 @@ clang++ \
   "${SRC}/axiom_runtime.cpp" \
   "${SRC}/axiom_force_service.mm" \
   "${SRC}/axiom_force_runtime.cpp" \
-  "${SRC}/capture_research.mm"
+  "${SRC}/capture_research_with_equipment.mm"
 
 codesign --force --sign - --timestamp=none "${OUT}"
 xattr -cr "${OUT}" 2>/dev/null || true
