@@ -29,6 +29,7 @@ clang++ \
   -O2 \
   -Wall \
   -Wextra \
+  -include strings.h \
   -I"${SRC}" \
   -o "${OUT}" \
   "${SRC}/CrimsonLooker.mm" \
