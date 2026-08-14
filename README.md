@@ -134,6 +134,24 @@ the *validation constants* a Windows ASI checks before binding, then scan Mach-O
 also includes triage guidance for judging whether a given ASI mod is portable at
 all, since some are afternoon projects and some are not.
 
+## Next targets: loadouts and free flight
+
+The next planned ports are intentionally narrower than a full Trinity port:
+
+- read the exact currently equipped item instance in every equipment slot;
+- prove how those instances move between inventory and equipment;
+- recover one engine-native "equip this existing instance" operation;
+- build verified save/apply loadouts on top of that operation;
+- reproduce Trinity's airborne vertical-velocity Free Flight behavior on arm64.
+
+The implementation order, acceptance tests, stop conditions, save-safety rules,
+and proposed CDUMM/iOS bridge are documented in
+[docs/LOADOUTS_AND_FLIGHT.md](docs/LOADOUTS_AND_FLIGHT.md).
+
+Do not skip directly to equipment writes. The first loadout milestone is a
+read-only equipment snapshot whose output changes predictably when exactly one
+piece of gear is changed manually.
+
 ## License
 
 MIT. See [LICENSE](LICENSE).
